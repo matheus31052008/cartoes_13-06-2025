@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cartões Interativos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Matheus Henrique Pereira - 24 - 2B</h1>
+<section id="container"></section>
+<script src="perguntas.js"></script>
+<script>
+function criaCartao(categoria, pergunta, resposta) {
+const container = document.getElementById('container');
+const article = document.createElement('article');
+article.className = 'cartao';
+article.innerHTML = `
+<div class="cartao__conteudo">
+<h3>${categoria}</h3>
+<div class="cartao__conteudo__pergunta"><p>${pergunta}</p></div>
+<div class="cartao__conteudo__resposta"><p>${resposta}</p></div>
+</div>`;
+container.appendChild(article);
+}
+</script>
+</body>
+</html>
